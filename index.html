@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Jin Lee — Problem solver, coffee enthusiast, non-elite jogger</title>
+<title>Jin Lee — Problem solver, coffee enthusiast, elite jogger</title>
 <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,7 @@
   *{box-sizing:border-box}
   body{margin:0;font:var(--bodyfs)/1.6 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;color:#111}
   header,section,footer{padding:32px 20px;margin:0 auto;max-width:var(--max)}
+  nav{display:none}
   h1{font-size:clamp(22.4px,4vw,38.4px);line-height:1.15;margin:16px 0 8px;font-weight:400}
   h2{font-size:18px;text-transform:none;letter-spacing:.08em;color:#666;margin:0 0 12px}
   .muted{color:#555;margin:0}
@@ -24,8 +25,10 @@
   .btn:hover{text-decoration:none;background:#111;color:#fff}
   .btn:focus-visible{outline:3px solid #99c2ff;outline-offset:2px}
   footer{border-top:1px solid #eee;color:#666}
+  header,section{scroll-margin-top:0}
   .hero{display:flex;gap:16px;align-items:center}
   .hero-text{flex:0 1 auto}
+  /* Transparent PNG + alpha-aware shadow at ~150° (down-left) */
   .hero-art img{display:block;height:200px;width:auto;object-fit:contain;filter:drop-shadow(-10px 12px 40px rgba(0,0,0,.18)) drop-shadow(-2px 3px 12px rgba(0,0,0,.08))}
   @media (max-width:560px){.hero{gap:12px}.hero-art img{height:calc(var(--h1fs)*1.15 + var(--bodyfs)*1.3)}}
   section{padding-top:20px;padding-bottom:20px}
@@ -42,7 +45,7 @@
     </div>
     <div class="hero-text">
       <h1>Jin Lee</h1>
-      <p class="muted">Problem solver, coffee enthusiast, non-elite jogger</p>
+      <p class="muted">Problem solver, coffee enthusiast, elite jogger</p>
     </div>
   </div>
 </header>
