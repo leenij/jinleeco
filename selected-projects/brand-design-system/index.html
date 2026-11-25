@@ -36,10 +36,11 @@ a{color:inherit}
 .project-desc{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
 .project-desc p+p{margin-top:14px}
 .rebrand-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.rebrand-card{background:var(--surface);border-radius:10px;border:1px solid var(--border);padding:32px;display:flex;flex-direction:column;align-items:center;gap:16px}
-.rebrand-card img{max-height:120px;width:auto;border:none}
+.rebrand-card{background:var(--surface);border-radius:10px;border:1px solid var(--border);padding:24px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.rebrand-logo{background:#fff;border-radius:8px;border:1px solid var(--border);width:100%;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;padding:24px 32px}
+.rebrand-logo img{max-height:80px;max-width:70%;width:auto;height:auto;border:none;object-fit:contain}
 .rebrand-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary)}
-@media(max-width:480px){.rebrand-card{padding:24px}.rebrand-card img{max-height:80px}}
+@media(max-width:480px){.rebrand-card{padding:16px}.rebrand-logo{padding:20px 24px}.rebrand-logo img{max-height:56px}}
 .project-gallery{padding:48px 0 80px;display:grid;gap:16px}
 .project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
 .site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
@@ -83,11 +84,15 @@ a{color:inherit}
     <div class="rebrand-compare">
       <div class="rebrand-card">
         <span class="rebrand-label">Before</span>
-        <img src="../images/phil-brand-logo-before.jpg" alt="Previous Phil logo — lowercase with cross mark">
+        <div class="rebrand-logo">
+          <img src="../images/phil-brand-logo-before.jpg" alt="Previous Phil logo — lowercase with cross mark">
+        </div>
       </div>
       <div class="rebrand-card">
         <span class="rebrand-label">After</span>
-        <img src="../images/phil-ds-logo.png" alt="New Phil logo — uppercase wordmark">
+        <div class="rebrand-logo">
+          <img src="../images/phil-ds-logo.png" alt="New Phil logo — uppercase wordmark">
+        </div>
       </div>
     </div>
     <img src="../images/phil-brand-logo-primary.png" alt="Primary logo guidelines" loading="lazy">
