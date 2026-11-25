@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Clinical Workflows — Jin Lee</title>
-<meta name="description" content="Redesigned clinical scheduling, billing, and patient management for KindEMR.">
+<title>Patient Experience — Jin Lee</title>
+<meta name="description" content="Kindbody's patient-facing mobile app for appointment booking and care management.">
 <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,9 @@ a{color:inherit}
 .project-desc{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
 .project-desc p+p{margin-top:14px}
 .project-gallery{padding:48px 0 80px;display:grid;gap:16px}
-.project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
+.project-gallery img{width:100%;border-radius:12px;border:1px solid var(--border)}
+.project-gallery--phones{grid-template-columns:repeat(2,1fr)}
+@media(min-width:640px){.project-gallery--phones{grid-template-columns:repeat(4,1fr)}}
 .site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
 :focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 </style>
@@ -47,12 +49,12 @@ a{color:inherit}
 
 <nav class="site-nav">
   <div class="wrap">
-    <a href="/portfolio/" class="site-nav-name">
+    <a href="/selected-projects/" class="site-nav-name">
       <img src="../../image.png" alt="" aria-hidden="true">
       Jin Lee
     </a>
     <div class="site-nav-links">
-      <a href="/portfolio/#about">About</a>
+      <a href="/selected-projects/#about">About</a>
       <a href="mailto:leenij@gmail.com">Say hi</a>
     </div>
   </div>
@@ -61,23 +63,24 @@ a{color:inherit}
 <main>
 <div class="wrap">
   <div class="project-hero">
-    <a href="/portfolio/" class="project-back">&larr; All projects</a>
-    <h1 class="project-title">Clinical workflows</h1>
+    <a href="/selected-projects/" class="project-back">&larr; All projects</a>
+    <h1 class="project-title">Patient experience</h1>
     <div class="project-meta">
+      <span class="project-pill">Phil</span>
       <span class="project-pill">Kindbody</span>
-      <span class="project-pill">Product Design</span>
+      <span class="project-pill">Mobile</span>
     </div>
     <div class="project-desc">
-      <p>Led design across Kindbody's EHR platform, KindEMR — rethinking scheduling, billing, and patient management workflows used daily by clinical staff.</p>
-      <p>Worked closely with clinicians to simplify complex tasks like appointment management, claim processing, and billing reconciliation, reducing friction in high-volume clinical operations.</p>
+      <p>Designed Kindbody's patient-facing mobile app for appointment booking, care management, and to-do tracking. The app needed to feel warm and approachable in a clinical domain that can be stressful for patients.</p>
+      <p>The design balanced clear task management with an encouraging, supportive tone — helping patients stay on top of their care plan without feeling overwhelmed.</p>
     </div>
   </div>
 
-  <div class="project-gallery">
-    <img src="../images/kb-scheduling.png" alt="KindEMR scheduling list view" loading="lazy">
-    <img src="../images/kb-billing.png" alt="KindEMR calendar day view" loading="lazy">
-    <img src="../images/kb-view1.png" alt="Patient billing detail" loading="lazy">
-    <img src="../images/kb-view2.png" alt="Billing with claim status" loading="lazy">
+  <div class="project-gallery project-gallery--phones">
+    <img src="../images/phil-app-1.png" alt="Prescription detail with coupon eligibility" loading="lazy">
+    <img src="../images/phil-app-2.png" alt="Signature and checkout flow" loading="lazy">
+    <img src="../images/phil-app-3.png" alt="Kindbody appointments screen" loading="lazy">
+    <img src="../images/phil-app-4.png" alt="Kindbody to-do list" loading="lazy">
   </div>
 </div>
 </main>
