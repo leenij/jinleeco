@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Design System — Jin Lee</title>
+<meta name="description" content="Phil's design system: tokens, component libraries with live code, and engineering governance.">
+<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+:root{--bg:#ffffff;--fg:#111111;--secondary:#555555;--tertiary:#888888;--surface:#f5f5f3;--border:#e5e5e0;--nav-bg:rgba(255,255,255,.92)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0f0f;--fg:#e4e4e0;--secondary:#9a9a96;--tertiary:#6a6a66;--surface:#1a1a1a;--border:#2a2a28;--nav-bg:rgba(15,15,15,.92);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0f0f;--fg:#e4e4e0;--secondary:#9a9a96;--tertiary:#6a6a66;--surface:#1a1a1a;--border:#2a2a28;--nav-bg:rgba(15,15,15,.92);color-scheme:dark}
+body{font:400 16px/1.6 'Inter',system-ui,sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+@media(min-width:768px){.wrap{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}}
+.site-nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.site-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.site-nav-name{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;font-size:15px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.site-nav-name img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+.site-nav-links{display:flex;gap:28px}
+.site-nav-links a{font-size:14px;font-weight:400;text-decoration:none;color:var(--tertiary);transition:color .15s}
+.site-nav-links a:hover{color:var(--fg)}
+.project-back{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--tertiary);text-decoration:none;margin-bottom:28px;transition:color .15s}
+.project-back:hover{color:var(--fg)}
+.project-hero{padding:48px 0 0}
+.project-title{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(32px,5vw,48px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:12px}
+.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.project-pill{font-size:13px;font-weight:500;padding:5px 14px;border-radius:100px;background:var(--surface);color:var(--secondary)}
+.project-desc{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
+.project-desc p+p{margin-top:14px}
+.rebrand-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rebrand-card{background:var(--surface);border-radius:10px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.rebrand-logo{width:100%;display:flex;align-items:center;justify-content:center;padding:28px 32px}
+.rebrand-logo img{height:96px;width:auto;object-fit:contain}
+.rebrand-card:first-child .rebrand-logo img{height:120px}
+.project-gallery .rebrand-logo img{border:none;border-radius:0;width:auto}
+.rebrand-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary)}
+@media(max-width:480px){.rebrand-card{padding:16px}.rebrand-logo{padding:20px 24px}.rebrand-logo img{max-height:80px}}
+.project-gallery{padding:48px 0 80px;display:grid;gap:16px}
+.project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
+.site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N3NEMLR7M8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-N3NEMLR7M8');</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="/selected-projects/" class="site-nav-name">
+      <img src="../../image.png" alt="" aria-hidden="true">
+      Jin Lee
+    </a>
+    <div class="site-nav-links">
+      <a href="/selected-projects/#about">About</a>
+      <a href="mailto:leenij@gmail.com">Say hi</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+  <div class="project-hero">
+    <a href="/selected-projects/" class="project-back">&larr; All projects</a>
+    <h1 class="project-title">A shared foundation for operator, partner and patient products</h1>
+    <div class="project-meta">
+      <span class="project-pill">Phil</span>
+      <span class="project-pill">Systems</span>
+    </div>
+    <div class="project-desc">
+      <p>I built Phil's design system from scratch, starting from what each product needed and setting the tokens, component libraries and engineering governance that kept every platform consistent.</p>
+    </div>
+  </div>
+
+  <div class="project-gallery">
+    <img src="../images/phil-design-system.png" alt="Design system foundation — tokens, governance and ownership" loading="lazy">
+    <img src="../images/phil-brand-before.png" alt="Design system color documentation" loading="lazy">
+    <img src="../images/phil-brand-after.png" alt="Component library with code examples" loading="lazy">
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">&copy; 2026 Jin Lee</div>
+</footer>
+
+</body>
+</html>
