@@ -47,6 +47,13 @@ a{color:inherit}
 .project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
 .site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
 :focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.decisions{padding:48px 0 0}
+.decisions-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary);margin-bottom:20px}
+.decisions-grid{display:grid;gap:24px}
+.decision h3{font-family:'Space Grotesk',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:1.3;margin-bottom:8px;display:flex;gap:10px}
+.decision h3 span{color:var(--tertiary)}
+.decision p{font-size:15px;line-height:1.65;color:var(--secondary)}
+@media(min-width:768px){.decisions-grid{grid-template-columns:repeat(3,1fr);gap:0}.decision{padding:0 28px;border-left:1px solid var(--border)}.decision:first-child{padding-left:0;border-left:none}.decision:last-child{padding-right:0}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3NEMLR7M8"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-N3NEMLR7M8');</script>
@@ -80,8 +87,25 @@ a{color:inherit}
     </div>
   </div>
 
+  <section class="decisions" aria-labelledby="decisions-label">
+    <h2 class="decisions-label" id="decisions-label">What I decided</h2>
+    <div class="decisions-grid">
+      <div class="decision">
+        <h3><span>01</span>Foundation</h3>
+        <p>Tokens and component libraries shared across every product, with accessibility built into shared patterns.</p>
+      </div>
+      <div class="decision">
+        <h3><span>02</span>Governance</h3>
+        <p>Engineering governance and handoff practices that set how components moved from Figma into production.</p>
+      </div>
+      <div class="decision">
+        <h3><span>03</span>Ownership</h3>
+        <p>I set architecture and standards. Offshore designers maintained it with QA, so onshore seniors owned research.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="project-gallery">
-    <img src="../images/phil-design-system.png" alt="Design system foundation — tokens, governance and ownership" loading="lazy">
     <img src="../images/phil-ds-color-migration.png" alt="Color token migration mapping each legacy color to its new token" loading="lazy">
     <img src="../images/phil-brand-before.png" alt="Design system color documentation" loading="lazy">
     <img src="../images/phil-ds-inputs.png" alt="My Phil input states for mobile and desktop: default, filled, focused, verified and error" loading="lazy">
