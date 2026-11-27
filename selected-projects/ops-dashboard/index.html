@@ -169,6 +169,152 @@ a{color:inherit}
 }
 
 :focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+
+.cs-card{
+  background:var(--surface);
+  border-radius:12px;
+  padding:clamp(24px,4vw,48px);
+}
+.cs-card+.cs-card{margin-top:16px}
+.cs-eyebrow{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:13px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  color:var(--tertiary);
+  margin-bottom:8px;
+}
+.cs-heading{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:clamp(24px,3.5vw,36px);
+  font-weight:700;line-height:1.15;
+  letter-spacing:-0.02em;
+  margin-bottom:16px;
+}
+.cs-body{
+  font-size:15px;line-height:1.65;
+  color:var(--secondary);
+}
+.cs-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(16px,3vw,32px);
+  align-items:start;
+}
+@media(max-width:680px){
+  .cs-split{grid-template-columns:1fr}
+}
+.cs-split-text{max-width:520px}
+
+.cs-compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(16px,3vw,32px);
+  margin-top:32px;
+}
+@media(max-width:680px){
+  .cs-compare{grid-template-columns:1fr}
+}
+.cs-compare img{
+  width:100%;
+  border-radius:8px;
+  border:1px solid var(--border);
+}
+.cs-compare-label{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:13px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  color:var(--tertiary);
+  margin-top:16px;margin-bottom:4px;
+}
+.cs-compare p{
+  font-size:14px;line-height:1.6;
+  color:var(--secondary);
+}
+
+.cs-steps{margin-top:28px}
+.cs-step{
+  display:grid;
+  grid-template-columns:32px 1fr;
+  gap:8px;
+  align-items:baseline;
+}
+.cs-step+.cs-step{margin-top:16px}
+.cs-step-num{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:15px;font-weight:700;
+  color:var(--fg);
+}
+.cs-step p{
+  font-size:15px;line-height:1.6;
+  color:var(--secondary);
+}
+
+.cs-verification-imgs{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  align-self:start;
+}
+@media(max-width:680px){
+  .cs-verification-imgs{grid-template-columns:1fr}
+}
+.cs-verification-imgs img{
+  width:100%;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:#fff;
+}
+
+.cs-outcome-img{
+  align-self:start;
+}
+.cs-outcome-img img{
+  width:100%;
+  border-radius:8px;
+  border:1px solid var(--border);
+}
+.cs-change-item+.cs-change-item{
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+}
+.cs-change-title{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:16px;font-weight:600;
+  margin-bottom:4px;
+}
+.cs-change-item p{
+  font-size:14px;line-height:1.6;
+  color:var(--secondary);
+}
+
+.cs-metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:clamp(12px,2vw,24px);
+  margin-top:32px;
+  padding-top:32px;
+  border-top:1px solid var(--border);
+}
+@media(max-width:680px){
+  .cs-metrics{grid-template-columns:repeat(2,1fr)}
+}
+.cs-metric-value{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:clamp(22px,3vw,32px);
+  font-weight:700;
+  letter-spacing:-0.02em;
+  line-height:1.2;
+  margin-bottom:6px;
+}
+.cs-metric-label{
+  font-size:14px;font-weight:500;
+  margin-bottom:4px;
+}
+.cs-metric p{
+  font-size:13px;line-height:1.5;
+  color:var(--tertiary);
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3NEMLR7M8"></script>
@@ -228,10 +374,104 @@ a{color:inherit}
     <p>Within two quarters, surging prescription volumes made it clear that manual processing was no longer sustainable. Because I had established a strict, component-driven design architecture, Engineering had the structural foundation necessary to automate the workflow. This redesign seamlessly facilitated the implementation of a full automation process, ultimately driving 70% of all orders to be fully automated.</p>
   </div>
 
-  <div class="project-gallery">
-    <img src="../images/phil-ops-redesign.png" alt="Before and after workflow comparison — from fragmented to guided, decision-first" loading="lazy">
-    <img src="../images/phil-ops-verification.png" alt="Verification workflow showing what the system checked and where judgment is needed" loading="lazy">
-    <img src="../images/phil-ops-outcome.png" alt="Outcome — processing time from 5 minutes to under 1 minute, 70% automated orders" loading="lazy">
+  <div style="padding:48px 0 80px;display:grid;gap:16px">
+
+    <div class="cs-card">
+      <div class="cs-split" style="margin-bottom:0">
+        <div class="cs-split-text">
+          <h2 class="cs-heading">From fragmented information to a guided, decision-first workflow</h2>
+        </div>
+        <div>
+          <p class="cs-body">I redesigned Scrub and Route around the decisions technicians and pharmacists needed to make. Clear stages, contextual actions and standardized patient, drug and pharmacy information replaced a dense page that depended on recall.</p>
+        </div>
+      </div>
+      <div class="cs-compare">
+        <div>
+          <img src="../images/crop-ops-before.png" alt="Previous Ops Dashboard interface — dense, unstructured layout with scattered user info, available CTAs, comments, pharmacy info, and provider drug info sections" loading="lazy">
+          <div class="cs-compare-label">Before</div>
+          <p>A dense, unstructured interface forced users to rely on memory, manually search for information, and toggle between screens to complete each order.</p>
+        </div>
+        <div>
+          <img src="../images/crop-ops-after.png" alt="Redesigned Ops Dashboard — organized patient details, pharmacy details, workflow steps, and clear instructions in a guided layout" loading="lazy">
+          <div class="cs-compare-label">After</div>
+          <p>A guided, component-driven workflow organizes information around the decisions users need to make, reducing cognitive load and speeding up processing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-card">
+      <div class="cs-split">
+        <div class="cs-split-text">
+          <div class="cs-eyebrow">Trust and control</div>
+          <h2 class="cs-heading">Showing what the system checked, and where judgment is needed</h2>
+          <p class="cs-body">As automation took on more orders, technicians needed to trust it. Each step showed what the system had verified and flagged what it couldn't resolve. Over time, it learned from how admins resolved unusual orders, suggesting next steps for their review before automating them too.</p>
+          <div class="cs-steps">
+            <div class="cs-step">
+              <span class="cs-step-num">01</span>
+              <p>Every field showed whether the system had verified it, so technicians focused only on what was flagged.</p>
+            </div>
+            <div class="cs-step">
+              <span class="cs-step-num">02</span>
+              <p>Ops Dash and pharmacy system values sat side by side, so a discrepancy was visible at a glance.</p>
+            </div>
+            <div class="cs-step">
+              <span class="cs-step-num">03</span>
+              <p>When a claim came back rejected, the system surfaced the reason and the technician chose the next step, routing to the pharmacy or moving the order to the prior authorization queue.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs-verification-imgs">
+          <img src="../images/phil-ops-before.png" alt="Verify Patient Information screen comparing Ops Dash and Best Rx values side by side" loading="lazy">
+          <img src="../images/phil-ops-after.png" alt="Review Scrub and Route screen showing insurance status, claim rejection details, and routing options" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-card">
+      <div class="cs-split">
+        <div class="cs-outcome-img">
+          <img src="../images/crop-ops-after.png" alt="Redesigned Ops Dashboard showing the complete guided workflow with patient details, pharmacy details, and step-by-step instructions" loading="lazy">
+        </div>
+        <div>
+          <div class="cs-eyebrow">How change happened</div>
+          <div class="cs-change-item">
+            <div class="cs-change-title">Guided Workflow</div>
+            <p>Standardized the order information and made next actions explicit, reducing reliance on memory.</p>
+          </div>
+          <div class="cs-change-item">
+            <div class="cs-change-title">Earn Team Adoption</div>
+            <p>Initially skeptical pharmacy staff adopted the guided steps. New hires could follow a consistent sequence instead of memorizing the process.</p>
+          </div>
+          <div class="cs-change-item">
+            <div class="cs-change-title">Rules-Based Automation</div>
+            <p>As volume rose, 70% of orders were automated where their requirements matched the processing rules.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="cs-metric-value">&gt;5 min &rarr; &lt;1 min</div>
+          <div class="cs-metric-label">Processing time</div>
+          <p>Reduced average order processing time by 80%.</p>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-value">70%</div>
+          <div class="cs-metric-label">Automated orders</div>
+          <p>Orders processed automatically when requirements matched processing rules.</p>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-value">5K &rarr; 60K</div>
+          <div class="cs-metric-label">Monthly transactions</div>
+          <p>Scaled operations 12x without a proportional increase in headcount.</p>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-value">Higher accuracy</div>
+          <div class="cs-metric-label">Fewer errors</div>
+          <p>Standardized data inputs and guided decisions reduced routing errors and rework.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 </main>
