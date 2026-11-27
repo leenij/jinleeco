@@ -35,6 +35,14 @@ a{color:inherit}
 .project-pill{font-size:13px;font-weight:500;padding:5px 14px;border-radius:100px;background:var(--surface);color:var(--secondary)}
 .project-desc{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
 .project-desc p+p{margin-top:14px}
+.project-section{padding:48px 0 0;max-width:620px}
+.project-section+.project-section{padding-top:40px}
+.project-section-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary);margin-bottom:12px}
+.project-section p{font-size:16px;line-height:1.7;color:var(--secondary)}
+.project-section p+p{margin-top:14px}
+.project-testimonial{margin-top:40px;padding:28px 32px;background:var(--surface);border-radius:12px;max-width:620px}
+.project-testimonial blockquote{font-size:16px;line-height:1.7;color:var(--fg);font-style:italic;margin-bottom:12px}
+.project-testimonial cite{font-size:14px;color:var(--tertiary);font-style:normal;display:block}
 .project-gallery{padding:48px 0 80px;display:grid;gap:16px}
 .project-gallery img{width:100%;border-radius:12px;border:1px solid var(--border)}
 .project-gallery--phones{grid-template-columns:repeat(2,1fr)}
@@ -70,14 +78,33 @@ a{color:inherit}
       <span class="project-pill">Mobile</span>
     </div>
     <div class="project-desc">
-      <p>Patients were flooding support channels with questions about out-of-pocket costs, delivery timelines, and cancellations. After auditing our messaging strategy, I discovered the readability score was at a college level — the communications were failing to inform patients about their order status, degrading trust and placing pressure on the support team.</p>
-      <p>I set the direction to simplify our language architecture across all channels, introducing daily automated updates via text and email, real-time transparency into order status, and clear copay assistance and coupon integration. The result was a 47% reduction in inbound support tickets — from 1,193 to 628 in a single quarter — while patient enrollment held steady at 85% week-over-week and script volume increased 34%.</p>
+      <p>Patients were flooding support channels with questions about out-of-pocket costs, delivery timelines, and cancellations. I audited the messaging strategy, simplified the language architecture across all channels, and introduced real-time order transparency — cutting inbound support tickets by 47%.</p>
     </div>
   </div>
 
+  <div class="project-section">
+    <div class="project-section-label">Problem</div>
+    <p>Frequently, patients contacted our support channels with questions regarding their out-of-pocket costs, drug delivery timelines, and order cancellations. The sheer volume and nature of these common inquiries indicated a systemic failure in our communications; patients were insufficiently informed about their order status, leading to high friction and frustration. This dynamic not only placed immense operational pressure on our support team but also severely degraded patient trust and overall satisfaction with the Phil experience.</p>
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Solution</div>
+    <p>Upon auditing our messaging strategy, I discovered our readability score was excessively complex, rating at a college level. I set the strategic direction to simplify our language architecture across all communication channels. While guiding my team through the UI execution of the updated patient portal, I ensured the new system prioritized real-time transparency.</p>
+    <p>We introduced daily automated updates via text and email, explicitly outlined the steps to obtain copay assistance through insurance, and prominently integrated our manufacturer coupon offers to eliminate financial ambiguity.</p>
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Outcome</div>
+    <p>Since launching this comprehensive communication strategy, we have seen transformative results across our key performance indicators. Patient enrollment has held steady at an impressive 85% week-over-week. More critically, the enhanced user experience drove a 47% reduction in inbound support tickets, plummeting from 1,193 to 628 in a single quarter. At the same time, script volume increased 34%, alongside improvements in operational efficiency and patient experience.</p>
+  </div>
+
+  <div class="project-testimonial">
+    <blockquote>&ldquo;It&rsquo;s been great. I haven&rsquo;t had to do anything on my part. Other than reading out a text message or read an email. I haven&rsquo;t had to make any phone calls. They (Phil) update me on whatever they are doing with my prescription, whether it was for refill or paperwork. I had to do nothing. I didn&rsquo;t have to call them once.&rdquo;</blockquote>
+    <cite>&mdash; R. Clark, a Phil patient</cite>
+  </div>
+
   <div class="project-gallery">
-    <img src="../images/deck-patient-problem.png" alt="Patient communication problem analysis and solution approach" loading="lazy">
-    <img src="../images/deck-patient-outcome.png" alt="Outcome metrics showing 47% reduction in support tickets" loading="lazy">
+    <img src="../images/deck-patient-app.png" alt="MyPhil Status 2.0 messaging template spreadsheet with SMS and email templates, alongside mobile mockups showing patient text updates and the Phil app prescription management screen" loading="lazy">
   </div>
 </div>
 </main>
