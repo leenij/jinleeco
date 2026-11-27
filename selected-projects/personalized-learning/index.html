@@ -35,11 +35,36 @@ a{color:inherit}
 .project-pill{font-size:13px;font-weight:500;padding:5px 14px;border-radius:100px;background:var(--surface);color:var(--secondary)}
 .project-desc{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
 .project-desc p+p{margin-top:14px}
-.project-section{padding:48px 0 0;max-width:620px}
+.project-section{padding:48px 0 0}
 .project-section+.project-section{padding-top:40px}
 .project-section-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary);margin-bottom:12px}
-.project-section p{font-size:16px;line-height:1.7;color:var(--secondary)}
+.project-section h2{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(22px,3.5vw,28px);font-weight:600;line-height:1.3;letter-spacing:-0.01em;margin-bottom:8px;max-width:620px}
+.project-section p{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
 .project-section p+p{margin-top:14px}
+.persona-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+@media(min-width:640px){.persona-grid{grid-template-columns:repeat(3,1fr)}}
+.persona-card{background:var(--surface);border-radius:10px;padding:24px}
+.persona-card h3{font-family:'Space Grotesk',system-ui,sans-serif;font-size:16px;font-weight:600;margin-bottom:4px}
+.persona-card .persona-trait{font-size:13px;font-weight:500;color:var(--tertiary);margin-bottom:10px}
+.persona-card p{font-size:14px;line-height:1.6;color:var(--secondary);max-width:none}
+.persona-card .persona-outcome{font-size:13px;font-weight:500;color:var(--fg);margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
+.project-callout{margin-top:24px;padding:20px 24px;border-left:3px solid var(--border);max-width:620px}
+.project-callout strong{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary);display:block;margin-bottom:6px}
+.project-callout p{font-size:16px;line-height:1.7;color:var(--secondary);max-width:none}
+.feature-list{list-style:none;margin-top:24px;max-width:620px}
+.feature-list li{padding:16px 0;border-bottom:1px solid var(--border)}
+.feature-list li:first-child{border-top:1px solid var(--border)}
+.feature-list h3{font-family:'Space Grotesk',system-ui,sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.feature-list h3 span{font-size:13px;font-weight:500;color:var(--tertiary)}
+.feature-list p{font-size:15px;line-height:1.6;color:var(--secondary);max-width:none}
+.stat-row{display:flex;align-items:baseline;gap:12px;margin-top:20px;margin-bottom:8px;max-width:620px}
+.stat-number{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(36px,6vw,48px);font-weight:700;line-height:1;letter-spacing:-0.02em}
+.stat-label{font-size:16px;line-height:1.4;color:var(--secondary)}
+.tactic-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px;max-width:620px}
+.tactic-item{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.tactic-item:first-child{border-top:1px solid var(--border)}
+.tactic-item h3{font-family:'Space Grotesk',system-ui,sans-serif;font-size:14px;font-weight:600;white-space:nowrap}
+.tactic-item p{font-size:15px;line-height:1.6;color:var(--secondary);max-width:none}
 .project-gallery{padding:48px 0 80px;display:grid;gap:16px}
 .project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
 .site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
@@ -77,29 +102,86 @@ a{color:inherit}
     </div>
   </div>
 
-  <div class="project-gallery" style="padding-bottom:0">
-    <img src="../images/deck-bv-mobile.png" alt="Mobile experience designed for quick-study, confidence, and performance visibility — showing dashboard with question bank progress, 84% overall score at 93rd percentile, drag-to-order quiz, and anatomy diagram question types" loading="lazy">
-  </div>
-
   <div class="project-section">
     <div class="project-section-label">Strategy</div>
-    <p>Research changed the product from one-size-fits-all to tailored journeys. Different user groups had different motivations, time constraints, and willingness to pay. Attending physicians were time-sensitive and wanted the exact CME credits needed for annual licensing, without extra work. Residents and students lacked time and needed challenging questions in short study windows with clear peer-performance feedback. Nurses and students were price-conscious and wanted focused exam prep at a lower price point than the full premium library.</p>
-    <p>The strategic shift was to move from a single responsive web experience to persona-driven mobile journeys, with freemium used where access and price were the biggest barriers.</p>
+    <h2>Research changed the product from one-size-fits-all to tailored journeys</h2>
+    <p>Different user groups had different motivations, time constraints, and willingness to pay.</p>
+    <div class="persona-grid">
+      <div class="persona-card">
+        <h3>Attending physicians</h3>
+        <div class="persona-trait">Time-sensitive</div>
+        <p>Wanted the exact CME credits needed for annual licensing, without extra work.</p>
+        <div class="persona-outcome">Straight purchase track</div>
+      </div>
+      <div class="persona-card">
+        <h3>Residents &amp; students</h3>
+        <div class="persona-trait">Lack of time + mobile</div>
+        <p>Need challenging questions in short study windows and clear peer-performance feedback.</p>
+        <div class="persona-outcome">Mobile + freemium</div>
+      </div>
+      <div class="persona-card">
+        <h3>Nurses + students</h3>
+        <div class="persona-trait">Price-conscious</div>
+        <p>Wanted focused exam prep at a lower price point than the full premium library.</p>
+        <div class="persona-outcome">Mobile-only lite product</div>
+      </div>
+    </div>
+    <div class="project-callout">
+      <strong>Strategic shift</strong>
+      <p>Move from a single responsive web experience to persona-driven mobile journeys, with freemium used where access and price were the biggest barriers.</p>
+    </div>
   </div>
 
   <div class="project-section">
     <div class="project-section-label">Mobile experience</div>
-    <p>The mobile product translated research into a focused set of behaviors rather than shrinking the web experience. It was designed for quick-study, confidence, and performance visibility. Users could create or resume a quiz in brief moments of downtime, see performance in context through peer benchmarking rather than as a score alone, and mirror test-day mechanics through exam simulation to reduce environment friction.</p>
+    <h2>Designed for quick-study, confidence, and performance visibility</h2>
+    <p>The mobile product translated research into a focused set of behaviors rather than shrinking the web experience.</p>
+    <ul class="feature-list">
+      <li>
+        <h3><span>1</span> Quick study</h3>
+        <p>Create or resume a quiz in brief moments of downtime.</p>
+      </li>
+      <li>
+        <h3><span>2</span> Peer benchmarking</h3>
+        <p>See performance in context rather than as a score alone.</p>
+      </li>
+      <li>
+        <h3><span>3</span> Exam simulation</h3>
+        <p>Mirror test-day mechanics to reduce environment friction.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-gallery" style="padding-bottom:0">
+    <img src="../images/deck-bv-mobile.png" alt="Mobile app screens showing dashboard with question bank progress, 84% overall score at 93rd percentile, drag-to-order nursing quiz, and anatomy diagram question" loading="lazy">
   </div>
 
   <div class="project-section">
     <div class="project-section-label">Monetization</div>
-    <p>Freemium built engagement. The next design problem was conversion. We optimized how users compared subscription tiers and understood value, driving a 30% increase in average order value within the first three months of the redesigned purchase experience.</p>
-    <p>We used price anchoring — changing the order of tiers so users evaluated options against a higher initial reference price. We made value comparison more explicit by surfacing differences between plans instead of presenting near-identical choices. And we placed the contextual upsell opportunity immediately before the primary purchase action.</p>
+    <h2>Freemium built engagement. The next design problem was conversion.</h2>
+    <p>We then optimized how users compared subscription tiers and understood value.</p>
+    <div class="stat-row">
+      <span class="stat-number">30%</span>
+      <span class="stat-label">increase in average order value within the first three months of the redesigned purchase experience</span>
+    </div>
+    <div class="tactic-grid">
+      <div class="tactic-item">
+        <h3>Price anchoring</h3>
+        <p>Changed the order of tiers so users evaluated options against a higher initial reference price.</p>
+      </div>
+      <div class="tactic-item">
+        <h3>Value comparison</h3>
+        <p>Made differences between plans more explicit instead of presenting near-identical choices.</p>
+      </div>
+      <div class="tactic-item">
+        <h3>Contextual upsell</h3>
+        <p>Placed the upgrade opportunity immediately before the primary purchase action.</p>
+      </div>
+    </div>
   </div>
 
   <div class="project-gallery">
-    <img src="../images/deck-bv-monetization.png" alt="Redesigned subscription tier comparison with pricing table showing Master, Prepare, Cram, and Free Trial plans — 30% increase in average order value through price anchoring, value comparison, and contextual upsell" loading="lazy">
+    <img src="../images/deck-bv-monetization.png" alt="Redesigned subscription tier comparison with pricing table showing Master, Prepare, Cram, and Free Trial plans" loading="lazy">
   </div>
 </div>
 </main>
