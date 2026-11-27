@@ -67,6 +67,8 @@ a{color:inherit}
 .tactic-item p{font-size:15px;line-height:1.6;color:var(--secondary);max-width:none}
 .project-gallery{padding:48px 0 80px;display:grid;gap:16px}
 .project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
+.project-gallery--phones{grid-template-columns:repeat(2,1fr)}
+@media(min-width:640px){.project-gallery--phones{grid-template-columns:repeat(4,1fr)}}
 .site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
 :focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 </style>
@@ -152,8 +154,11 @@ a{color:inherit}
     </ul>
   </div>
 
-  <div class="project-gallery" style="padding-bottom:0">
-    <img src="../images/crop-bv-phones.png" alt="Four mobile app screens — dashboard with question bank progress, performance view with 84% overall score at 93rd percentile, drag-to-order nursing quiz, and anatomy diagram question" loading="lazy">
+  <div class="project-gallery project-gallery--phones" style="padding-bottom:0">
+    <img src="../images/bv-screen-1.png" alt="Dashboard with question bank progress and quiz creation" loading="lazy">
+    <img src="../images/bv-screen-2.png" alt="Performance view with 84% overall score at 93rd percentile" loading="lazy">
+    <img src="../images/bv-screen-3.png" alt="Drag-to-order nursing quiz question" loading="lazy">
+    <img src="../images/bv-screen-4.png" alt="Anatomy diagram question with tap-to-place target" loading="lazy">
   </div>
 
   <div class="project-section">
@@ -181,7 +186,7 @@ a{color:inherit}
   </div>
 
   <div class="project-gallery">
-    <img src="../images/crop-bv-pricing.png" alt="Redesigned subscription tier comparison showing Master, Prepare, Cram, and Free Trial plans with pricing, features, and CME certificate add-ons" loading="lazy">
+    <img src="../images/src-bv-pricing.png" alt="Redesigned subscription tier comparison showing Master, Prepare, Cram, and Free Trial plans with pricing, features, and CME certificate add-ons" loading="lazy">
   </div>
 </div>
 </main>
