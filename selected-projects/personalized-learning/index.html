@@ -35,6 +35,11 @@ a{color:inherit}
 .project-pill{font-size:13px;font-weight:500;padding:5px 14px;border-radius:100px;background:var(--surface);color:var(--secondary)}
 .project-desc{font-size:16px;line-height:1.7;color:var(--secondary);max-width:620px}
 .project-desc p+p{margin-top:14px}
+.project-section{padding:48px 0 0;max-width:620px}
+.project-section+.project-section{padding-top:40px}
+.project-section-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary);margin-bottom:12px}
+.project-section p{font-size:16px;line-height:1.7;color:var(--secondary)}
+.project-section p+p{margin-top:14px}
 .project-gallery{padding:48px 0 80px;display:grid;gap:16px}
 .project-gallery img{width:100%;border-radius:10px;border:1px solid var(--border)}
 .site-footer{padding:28px 0;border-top:1px solid var(--border);font-size:13px;color:var(--tertiary)}
@@ -68,15 +73,33 @@ a{color:inherit}
       <span class="project-pill">Product Design</span>
     </div>
     <div class="project-desc">
-      <p>Research revealed that BoardVitals' one-size-fits-all web experience didn't serve its distinct user groups — attending physicians needing specific CME credits, residents and students wanting challenging questions in short study windows, and nurses looking for focused exam prep at a lower price point. Each group had different motivations, time constraints, and willingness to pay.</p>
-      <p>I led the strategic shift from a single responsive web experience to persona-driven mobile journeys, with freemium used where access and price were the biggest barriers. The mobile product was designed for quick-study, confidence, and performance visibility. We then optimized how users compared subscription tiers and understood value, driving a 30% increase in average order value within the first three months of the redesigned purchase experience.</p>
+      <p>BoardVitals' one-size-fits-all web experience didn't serve its distinct user groups. I led the strategic shift to persona-driven mobile journeys with freemium, then optimized subscription tier comparison — driving a 30% increase in average order value within three months.</p>
     </div>
   </div>
 
+  <div class="project-gallery" style="padding-bottom:0">
+    <img src="../images/deck-bv-mobile.png" alt="Mobile experience designed for quick-study, confidence, and performance visibility — showing dashboard with question bank progress, 84% overall score at 93rd percentile, drag-to-order quiz, and anatomy diagram question types" loading="lazy">
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Strategy</div>
+    <p>Research changed the product from one-size-fits-all to tailored journeys. Different user groups had different motivations, time constraints, and willingness to pay. Attending physicians were time-sensitive and wanted the exact CME credits needed for annual licensing, without extra work. Residents and students lacked time and needed challenging questions in short study windows with clear peer-performance feedback. Nurses and students were price-conscious and wanted focused exam prep at a lower price point than the full premium library.</p>
+    <p>The strategic shift was to move from a single responsive web experience to persona-driven mobile journeys, with freemium used where access and price were the biggest barriers.</p>
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Mobile experience</div>
+    <p>The mobile product translated research into a focused set of behaviors rather than shrinking the web experience. It was designed for quick-study, confidence, and performance visibility. Users could create or resume a quiz in brief moments of downtime, see performance in context through peer benchmarking rather than as a score alone, and mirror test-day mechanics through exam simulation to reduce environment friction.</p>
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Monetization</div>
+    <p>Freemium built engagement. The next design problem was conversion. We optimized how users compared subscription tiers and understood value, driving a 30% increase in average order value within the first three months of the redesigned purchase experience.</p>
+    <p>We used price anchoring — changing the order of tiers so users evaluated options against a higher initial reference price. We made value comparison more explicit by surfacing differences between plans instead of presenting near-identical choices. And we placed the contextual upsell opportunity immediately before the primary purchase action.</p>
+  </div>
+
   <div class="project-gallery">
-    <img src="../images/deck-bv-strategy.png" alt="User research and persona-driven strategy" loading="lazy">
-    <img src="../images/deck-bv-mobile.png" alt="Mobile experience designed for quick study sessions" loading="lazy">
-    <img src="../images/deck-bv-monetization.png" alt="Monetization results with 30% increase in average order value" loading="lazy">
+    <img src="../images/deck-bv-monetization.png" alt="Redesigned subscription tier comparison with pricing table showing Master, Prepare, Cram, and Free Trial plans — 30% increase in average order value through price anchoring, value comparison, and contextual upsell" loading="lazy">
   </div>
 </div>
 </main>

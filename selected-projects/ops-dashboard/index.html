@@ -145,6 +145,12 @@ a{color:inherit}
 }
 .project-desc p+p{margin-top:14px}
 
+.project-section{padding:48px 0 0;max-width:620px}
+.project-section+.project-section{padding-top:40px}
+.project-section-label{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--tertiary);margin-bottom:12px}
+.project-section p{font-size:16px;line-height:1.7;color:var(--secondary)}
+.project-section p+p{margin-top:14px}
+
 .project-gallery{
   padding:48px 0 80px;
   display:grid;
@@ -199,14 +205,32 @@ a{color:inherit}
       <span class="project-pill">Product Design</span>
     </div>
     <div class="project-desc">
-      <p>The Scrub and Route workflow was the critical first step for every technician and pharmacist — reviewing patient data and transferring orders to partnered pharmacies. But the legacy architecture was brittle with no guided experience. Pharmacists relied on manual memory and sifted through unnecessary information, pushing processing times past five minutes and capping daily fulfillment volume.</p>
-      <p>I directed a complete architectural overhaul, transitioning to a component-driven framework with step-by-step instructions and standardized data inputs. The redesign cut processing time from over five minutes to under one minute, reduced training time as we scaled staff 10x, and established the structural foundation that enabled engineering to automate 70% of all orders within two quarters.</p>
+      <p>The Scrub and Route workflow was the critical first step for every technician and pharmacist, but the legacy architecture was brittle with no guided experience. I directed a complete architectural overhaul — cutting processing time from five minutes to under one minute and enabling 70% order automation.</p>
     </div>
+  </div>
+
+  <div class="project-gallery" style="padding-bottom:0">
+    <img src="../images/deck-ops-before-after.png" alt="Previous processing tool versus updated processing tool — side-by-side comparison showing the transition from a cluttered, unstructured interface to a clean, workflow-driven design with organized sections for patient details, pharmacy details, insurance information, and step-by-step instructions" loading="lazy">
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Problem</div>
+    <p>The Scrub and Route within the Ops Dash is the critical first step for all technicians and pharmacists, requiring them to review patient data and transfer orders to partnered pharmacies. However, the legacy architecture was brittle and lacked a structured, guided experience. Pharmacists were forced to rely on manual memory and sift through unnecessary information to process each order. This systemic inefficiency created an operational bottleneck, pushing average processing times over five minutes and effectively capping our daily fulfillment volume.</p>
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Solution</div>
+    <p>Resolving this required more than a UI refresh because it demanded a complete architectural overhaul of the workflow. I directed the transition to a scalable, component-driven framework that provided clear, step-by-step instructions. By partnering closely with Product and Engineering leadership, I ensured our design strategy standardized data inputs and established a streamlined workflow. This approach eliminated the cognitive burden on the pharmacy team, fundamentally improving both processing speed and routing accuracy.</p>
+  </div>
+
+  <div class="project-section">
+    <div class="project-section-label">Outcome</div>
+    <p>Instead of pursuing a time-consuming and expensive platform overhaul, I scoped a targeted design strategy focusing on the critical areas users needed most including guided experiences, standardized order information, and clear communication channels. While the pharmacy team was initially skeptical of the operational shift, the intuitive component-driven design drove rapid adoption. We achieved an immediate reduction in processing time from over five minutes to under a minute, while reducing platform training time for new hires as we scaled the staff 10x.</p>
+    <p>Within two quarters, surging prescription volumes made it clear that manual processing was no longer sustainable. Because I had established a strict, component-driven design architecture, Engineering had the structural foundation necessary to automate the workflow. This redesign seamlessly facilitated the implementation of a full automation process, ultimately driving 70% of all orders to be fully automated.</p>
   </div>
 
   <div class="project-gallery">
     <img src="../images/phil-ops-redesign.png" alt="Before and after workflow comparison — from fragmented to guided, decision-first" loading="lazy">
-    <img src="../images/deck-ops-before-after.png" alt="Previous processing tool versus updated processing tool" loading="lazy">
     <img src="../images/phil-ops-verification.png" alt="Verification workflow showing what the system checked and where judgment is needed" loading="lazy">
     <img src="../images/phil-ops-outcome.png" alt="Outcome — processing time from 5 minutes to under 1 minute, 70% automated orders" loading="lazy">
   </div>
